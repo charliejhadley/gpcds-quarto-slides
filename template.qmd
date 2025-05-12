@@ -1,0 +1,21 @@
+---
+title: "Graph | Plot | Chart | Data Story<br>Deck Template"
+format: gpcds-slides-revealjs
+---
+
+## Graph Specific Slide {.graph-slide}
+
+There are classes for all the dataviz types, available via `{.graph-slide}` etc
+
+The classes customise the following: 
+
+- Headers are the primary colour
+- Body text is the tertiary darker colour
+
+At present [Updated May 2025] Quarto doesn't have a solution for pointing to a remote _brand.yml file. But if it did might want to use some of the colours here.
+
+# Level 1 header
+
+Content
+
+## Another new slide

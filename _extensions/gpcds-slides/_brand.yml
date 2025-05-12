@@ -1,0 +1,83 @@
+meta: 
+  name: Graph | Plot | Chart | Data Story
+
+logo: 
+  images:
+    icon: brand-identity/favicon_32x32.png
+    full-white-on-black: brand-identity/logomark_white_on_black.png
+    full: brand-identity/logomark_colour.png
+  small: icon
+  medium: 
+    dark: full-white-on-black
+    light: full
+  large:
+    dark: full-white-on-black
+    light: full
+
+color:
+  palette:
+    neutral: "#F9F7F1" 
+    brand-blue: "#3172AD"
+    rag-green: "#06402B"
+    rag-red: "#B33134"
+    graph-primary: '#30CED1'
+    graph-tertiary-darker: '#105052'
+    graph-tertiary-lighter: '#1E8F91'
+    graph-tertiary: '#1B8385'
+    graph-secondary: '#D13BA4'
+    plot-primary: '#E0BE36'
+    plot-tertiary-darker: '#615216'
+    plot-tertiary-lighter: '#A18826'
+    plot-tertiary: '#947A14'
+    plot-secondary: '#4CE0D0'
+    chart-primary: '#FA8A5B'
+    chart-tertiary-darker: '#80452E'
+    chart-tertiary-lighter: '#C06845'
+    chart-tertiary: '#B3542F'
+    chart-secondary: '#A7FF75'
+    story-primary: '#EB526F'
+    story-tertiary-darker: '#6B2332'
+    story-tertiary-lighter: '#AA3D4F'
+    story-tertiary: '#9E283D'
+    story-secondary: '#EBE46A'
+    other-primary: '#D8F794'
+    other-tertiary-darker: '#697847'
+    other-tertiary-lighter: '#A1B86D'
+    other-tertiary: '#90AB55'
+    other-secondary: '#AEC6F8'
+    grey-dark: '#656370'
+    grey-mid: '#BBBBBD'
+    grey-light: '#DCDCDE'
+    ux-blue-mid: '#4464AD'
+    ux-blue-dark: '#2A3E6E'
+    ux-blue-light: '#6B8EF3'
+    black-mid: '#4F4F4F'
+  background: neutral
+  foreground: black
+  primary: brand-blue
+  secondary: saddlebrown
+  info: red
+  success: rag-green
+  danger: rag-red
+
+typography:
+  base: Karla
+  headings:
+    family: Futura
+    weight: 700
+    color: primary
+  link:
+    color: maroon
+    decoration: underline
+    
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: $brand-ux-blue-dark
+      navbar-fg: "#ffffff"
+      footer-bg: $brand-ux-blue-light
+      footer-fg: "#ffffff"
+      body-bg: "#F9F7F2"
+  revealjs:
+    defaults:
+      body-bg: "#F9F7F2"

@@ -1,0 +1,114 @@
+/*-- scss:defaults --*/
+
+$body-bg: #F9F7F2;
+
+/* ---
+I would love to be able to use _brand.yml colours here but I get a theme compilation error
+So instead we have duplicated the colours
+---*/ 
+
+$brand-brand-blue: #3172AD;
+$brand-rag-green: #06402B;
+$brand-rag-red: #B33134;
+$brand-graph-primary: #30CED1;
+$brand-graph-tertiary-darker: #105052;
+$brand-graph-tertiary-lighter: #1E8F91;
+$brand-graph-tertiary: #1B8385;
+$brand-graph-secondary: #D13BA4;
+$brand-plot-primary: #E0BE36;
+$brand-plot-tertiary-darker: #615216;
+$brand-plot-tertiary-lighter: #A18826;
+$brand-plot-tertiary: #947A14;
+$brand-plot-secondary: #4CE0D0;
+$brand-chart-primary: #FA8A5B;
+$brand-chart-tertiary-darker: #80452E;
+$brand-chart-tertiary-lighter: #C06845;
+$brand-chart-tertiary: #B3542F;
+$brand-chart-secondary: #A7FF75;
+$brand-story-primary: #EB526F;
+$brand-story-tertiary-darker: #6B2332;
+$brand-story-tertiary-lighter: #AA3D4F;
+$brand-story-tertiary: #9E283D;
+$brand-story-secondary: #EBE46A;
+$brand-other-primary: #D8F794;
+$brand-other-tertiary-darker: #697847;
+$brand-other-tertiary-lighter: #A1B86D;
+$brand-other-tertiary: #90AB55;
+$brand-other-secondary: #AEC6F8;
+$brand-grey-dark: #656370;
+$brand-grey-mid: #BBBBBD;
+$brand-grey-light: #DCDCDE;
+$brand-ux-blue-mid: #4464AD;
+$brand-ux-blue-dark: #2A3E6E;
+$brand-ux-blue-light: #6B8EF3;
+$brand-black-mid: #4F4F4F;
+
+// $body-color: #212529;
+// $presentation-heading-font: Futura;
+// $font-family-sans-serif: Karla;
+
+
+// /*-- scss:rules --*/
+
+.center-v {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+  color: #7e588aff;
+  height: 1%;
+}
+
+/* Dataviz specific classes */
+
+.graph-slide {
+    color: $brand-graph-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-graph-primary !important;
+  }
+ 
+  a {
+    color: $brand-graph-secondary !important;
+  }
+ 
+}
+
+.plot-slide {
+    color: $brand-plot-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-plot-primary !important;
+  }
+ 
+  a {
+    color: $brand-plot-secondary !important;
+  }
+ 
+}
+
+.chart-slide {
+    color: $brand-chart-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-chart-primary !important;
+  }
+ 
+  a {
+    color: $brand-chart-secondary !important;
+  }
+ 
+}
+
+.story-slide {
+    color: $brand-story-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-story-primary !important;
+  }
+ 
+  a {
+    color: $brand-story-secondary !important;
+  }
+ 
+}

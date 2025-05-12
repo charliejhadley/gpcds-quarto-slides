@@ -1,0 +1,7 @@
+title: GPCDS Quarto Deck
+author: Charlotte Hadley
+version: 0.0.1
+contributes:
+  formats:
+    revealjs:
+       theme: [default, gpcds-slides.scss]
