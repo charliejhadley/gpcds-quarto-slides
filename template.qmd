@@ -53,6 +53,31 @@ We use some weirdness to make this work for us.
 
 Level 2 headings create nice slides like this with the title at the top of the slide.
 
+Head **down** to a task slide!
+
+:::
+
+::: {.column width="30%"}
+
+<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-arrow-down"></i></span>
+
+:::
+
+::::
+
+## Task slide
+
+::: {.task-icon}
+<i class="fa-solid fa-clipboard-question"></i>
+:::
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+Level 2 headings create nice slides like this with the title at the top of the slide.
+
 Head **across** to the next section of the talk!
 
 :::
@@ -129,3 +154,10 @@ However it is recommended to **AVOID THIS** as it has very non-standard behaviou
 :::
 
 ::::
+
+# Task slide
+
+::: {.task-icon}
+<i class="fa-solid fa-clipboard-question"></i>
+:::
+

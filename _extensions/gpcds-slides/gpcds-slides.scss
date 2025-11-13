@@ -71,6 +71,24 @@ $brand-neutral: #F9F7F1;
   }
 }
 
+.task-icon {
+  counter-reset: count;
+  position: fixed; top: -30px; right: -30px;
+  font-size: 3rem;
+
+  i {
+    color: $brand-story-primary !important;
+  }
+
+/*  p::after{
+    font-size: 2rem;
+    content: counter(count)".";
+    counter-increment: count;
+  }
+*/
+
+}
+
 .section-arrow{
   position: fixed; bottom: 0px; right: 0px;
   font-size: 100px;
