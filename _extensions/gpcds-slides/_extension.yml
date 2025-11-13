@@ -7,3 +7,13 @@ contributes:
       theme: [default, gpcds-slides.scss]
       slide-number: "c/t"
       footer: "<span style='color:{{<brand color story-tertiary-darker>}}'><span style='color:{{<brand color graph-primary>}}'>GRAPH</span> | <span style='color:{{<brand color plot-primary>}}'>PLOT</span> | <span style='color:{{<brand color chart-primary>}}'>CHART</span> | <span style='color:{{<brand color story-primary>}}'>DATA STORY</span></span>"
+      navigation-mode: vertical
+      controls-layout: bottom-right
+      controls-tutorial: true
+      include-in-header:
+        - includes.html
+      title-slide-attributes:
+        data-background-image: idents_minor_four-wise.png
+      format-resources:
+        - idents_minor_four-wise.png
+        - background.jpg

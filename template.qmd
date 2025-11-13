@@ -1,126 +1,131 @@
 ---
-title: "GRAPH | PLOT | CHART | DATA STORY<br>revealjs TemplateTests"
+pagetitle: "GPCDS Quarto Template"
 format: 
     gpcds-slides-revealjs:
+        title-slide: false
         slide-number: "c/t"
         brand: brand.yml
 ---
 
-# {background-color="#efee"}
+## {.gpcds-title-slide}
 
-<span style='{{<brand color chart-primary>}}'>foo</span>
+::: {.titlebox style="text-align:center; font-size: 3em;"}
 
-# {background-image="example-slide.png" background-size="100%"}
+GPCDS Quarto Template
 
-## Slide
+Charlotte Jane Hadley
 
-```{=html}
-<h2>HELLO</h2>
-```
+[Date Maybe]{style="font-size:0.5em;"}
 
-```{=html}
-<style>
-.section-1 {
-    /* Top edge at 0%, left at 0%
-       Right edge at 100%, top at 0%
-       Bottom right corner at 100%, say 80% down
-       Bottom left corner at 0%, say 100% down */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-    background-color:red;
-    /* You'd need to adjust these percentages to create a 40-degree slope */
-}
-
-/* For the next section, the top edge would align with the previous section's bottom edge */
-.section-2 {
-    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
-    /* This is just illustrative; precise calculation is needed */
-}
-</style>
-
-<div class="section-1">
-HELLO
-</div>
-
-```
-
-
-# Section Slide
-
-When creating a slide with level 1 heading it will look like this.
-
-Learn more from https://emilhvitfeldt.com/project/slidecraft-101/#blog-posts
-
-TEST
-
-## Standard slide
-
-This is how most slides will look.
-
-```{r}
-#| echo: true
-library("tidyverse")
-gss_cat %>%
-    count(partyid) %>%
-    ggplot() +
-    aes(x = n,
-        y = partyid) +
-    geom_col()
-```
-
-## Graph Specific Slide {.graph-slide}
-
-There are classes for all the dataviz types, available via `{.graph-slide}` etc
-
-The classes customise the following: 
-
-- Headers are the primary colour
-- Body text is the tertiary darker colour
-
-At present [Updated May 2025] Quarto doesn't have a solution for [pointing to a remote _brand.yml file](https://github.com/quarto-dev/quarto-cli/discussions/12688). But if it did might want to use some of the colours here.
-
-## Plot Specific Slide {.plot-slide}
-
-This slide uses the `{.plot-slide}` style.
-
-Links are a [different colour](https://google.com)
-
-::: columns
-::: {.column width="50%"}
-Columns
-
-Columns
+![](idents_minor_four-wise.png){style='border: 5px solid #555;;width:25%'}
 :::
 
-::: {.column width="50%"}
-Columns
+# This template defaults to vertical
 
-Columns
+:::: {.columns}
+
+::: {.column width="70%"}
+
+See docs on the [quarto website](https://quarto.org/docs/presentations/revealjs/advanced.html#vertical-slides)
+
+- Use level 1 headings to go across
+
+- Use level 2 headings to go up/down.
+
+We use some weirdness to make this work for us.
+
 :::
+
+::: {.column width="30%"}
+
+<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-arrow-down"></i></span>
+
+
 :::
 
+::::
 
-## Chart Specific Slide {.chart-slide}
+## Hello from up there!
 
-This slide uses the `{.chart-slide}` style.
+:::: {.columns}
 
-Links are a [different colour](https://google.com)
+::: {.column width="70%"}
+
+Level 2 headings create nice slides like this with the title at the top of the slide.
+
+Head **across** to the next section of the talk!
+
+:::
+
+::: {.column width="30%"}
+
+<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-arrow-right"></i></span>
+
+:::
+
+::::
 
 
-## Story Specific Slide {.story-slide}
+# Section break slides {.graph-title-slide .fa-down-arrow}
 
-This slide uses the `{.story-slide}` style.
+These indicate you should go downwards.
 
-Links are a [different colour](https://google.com)
+::: {.section-arrow}
+<i class="fa-solid fa-arrow-down"></i>
+:::
 
-## Story Specific Slide {.other-slide}
+## GPCDS slide styles {.story-slide}
 
-This slide uses the `{.other-slide}` style.
+Notice how everything looks a little different? Well, there are these special classes:
 
-Links are a [different colour](https://google.com)
+- .graph-slide
+- .graph-title-slide
+- .plot-slide
+- .plot-title-slide
+- .chart-slide
+- .chart-title-slide
+- .story-slide
+- .story-title-slide
+
+# Default section break
+
+Notice there is no arrow here.
+
+The arrow was added using 
+
+```{verbatim}
+::: {.section-arrow}
+<i class="fa-solid fa-arrow-down"></i>
+:::
+```
 
 
-# Level 1 header
+# Another nice section break {.story-title-slide}
 
-Content
+# 
 
-## Another new slide
+### 1-3, miss the 2
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+Using this pattern creates across slides that feel like normal progression.
+
+```{verbatim}
+#
+
+### 1-3, miss the 2
+```
+
+However it is recommended to **AVOID THIS** as it has very non-standard behaviour. Check the source to see terrifying things done to the `<section>` tags.
+
+:::
+
+::: {.column width="30%"}
+
+<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-bomb"></i></span>
+
+:::
+
+::::

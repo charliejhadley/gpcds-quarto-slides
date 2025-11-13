@@ -9,7 +9,7 @@
 <link href="template_files/libs/quarto-html/quarto-syntax-highlighting-dc55a5b9e770e841cd82e46aadbfb9b0.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.24">
 
-  <title>GRAPH | PLOT | CHART | DATA STORY revealjs TemplateTests</title>
+  <title>GPCDS Quarto Template</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto-84ac9eb7179c2c9496c84f3c4362e297.css">
+  <link rel="stylesheet" href="template_files/libs/revealjs/dist/theme/quarto-8623bfbca061b4b4ca7d854ac18f810c.css">
   <link href="template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -186,122 +186,101 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://kit.fontawesome.com/2c8252c536.js" crossorigin="anonymous"></script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">GRAPH | PLOT | CHART | DATA STORY<br>revealjs TemplateTests</h1>
 
-<div class="quarto-title-authors">
+<section id="section" class="slide level2 gpcds-title-slide">
+<h2></h2>
+<div class="titlebox" style="text-align:center; font-size: 3em;">
+<p>GPCDS Quarto Template</p>
+<p>Charlotte Jane Hadley</p>
+<p><span style="font-size:0.5em;">Date Maybe</span></p>
+<p><img data-src="idents_minor_four-wise.png" style="border: 5px solid #555;;width:25%"></p>
 </div>
-
 </section>
-<section id="section" class="title-slide slide level1 center" data-background-color="#efee">
-<h1></h1>
-<p><span style="#FA8A5B">foo</span></p>
-</section>
-
 <section>
-<section id="section-1" class="title-slide slide level1 center" data-background-image="example-slide.png" data-background-size="100%">
-<h1></h1>
-
-</section>
-<section id="slide" class="slide level2">
-<h2>Slide</h2>
-<h2>HELLO</h2>
-<style>
-.section-1 {
-    /* Top edge at 0%, left at 0%
-       Right edge at 100%, top at 0%
-       Bottom right corner at 100%, say 80% down
-       Bottom left corner at 0%, say 100% down */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
-    background-color:red;
-    /* You'd need to adjust these percentages to create a 40-degree slope */
-}
-
-/* For the next section, the top edge would align with the previous section's bottom edge */
-.section-2 {
-    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
-    /* This is just illustrative; precise calculation is needed */
-}
-</style>
-
-<div class="section-1">
-HELLO
-</div>
-
-</section></section>
-<section>
-<section id="section-slide" class="title-slide slide level1 center">
-<h1>Section Slide</h1>
-<p>When creating a slide with level 1 heading it will look like this.</p>
-<p>Learn more from https://emilhvitfeldt.com/project/slidecraft-101/#blog-posts</p>
-<p>TEST</p>
-</section>
-<section id="standard-slide" class="slide level2">
-<h2>Standard slide</h2>
-<p>This is how most slides will look.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb1-2"><a href=""></a>gss_cat <span class="sc">%&gt;%</span></span>
-<span id="cb1-3"><a href=""></a>    <span class="fu">count</span>(partyid) <span class="sc">%&gt;%</span></span>
-<span id="cb1-4"><a href=""></a>    <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb1-5"><a href=""></a>    <span class="fu">aes</span>(<span class="at">x =</span> n,</span>
-<span id="cb1-6"><a href=""></a>        <span class="at">y =</span> partyid) <span class="sc">+</span></span>
-<span id="cb1-7"><a href=""></a>    <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-
-</div>
-<img data-src="template_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
-<section id="graph-specific-slide" class="slide level2 graph-slide">
-<h2>Graph Specific Slide</h2>
-<p>There are classes for all the dataviz types, available via <code>{.graph-slide}</code> etc</p>
-<p>The classes customise the following:</p>
-<ul>
-<li>Headers are the primary colour</li>
-<li>Body text is the tertiary darker colour</li>
-</ul>
-<p>At present [Updated May 2025] Quarto doesn’t have a solution for <a href="https://github.com/quarto-dev/quarto-cli/discussions/12688">pointing to a remote _brand.yml file</a>. But if it did might want to use some of the colours here.</p>
-</section>
-<section id="plot-specific-slide" class="slide level2 plot-slide">
-<h2>Plot Specific Slide</h2>
-<p>This slide uses the <code>{.plot-slide}</code> style.</p>
-<p>Links are a <a href="https://google.com">different colour</a></p>
+<section id="this-template-defaults-to-vertical" class="title-slide slide level1 center">
+<h1>This template defaults to vertical</h1>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>Columns</p>
-<p>Columns</p>
-</div><div class="column" style="width:50%;">
-<p>Columns</p>
-<p>Columns</p>
+<div class="column" style="width:70%;">
+<p>See docs on the <a href="https://quarto.org/docs/presentations/revealjs/advanced.html#vertical-slides">quarto website</a></p>
+<ul>
+<li><p>Use level 1 headings to go across</p></li>
+<li><p>Use level 2 headings to go up/down.</p></li>
+</ul>
+<p>We use some weirdness to make this work for us.</p>
+</div><div class="column" style="width:30%;">
+<p><span style="color:#EB526F;font-size:10rem"><i class="fa-solid fa-arrow-down"></i></span></p>
 </div></div>
 </section>
-<section id="chart-specific-slide" class="slide level2 chart-slide">
-<h2>Chart Specific Slide</h2>
-<p>This slide uses the <code>{.chart-slide}</code> style.</p>
-<p>Links are a <a href="https://google.com">different colour</a></p>
-</section>
-<section id="story-specific-slide" class="slide level2 story-slide">
-<h2>Story Specific Slide</h2>
-<p>This slide uses the <code>{.story-slide}</code> style.</p>
-<p>Links are a <a href="https://google.com">different colour</a></p>
-</section>
-<section id="story-specific-slide-1" class="slide level2 other-slide">
-<h2>Story Specific Slide</h2>
-<p>This slide uses the <code>{.other-slide}</code> style.</p>
-<p>Links are a <a href="https://google.com">different colour</a></p>
+<section id="hello-from-up-there" class="slide level2">
+<h2>Hello from up there!</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>Level 2 headings create nice slides like this with the title at the top of the slide.</p>
+<p>Head <strong>across</strong> to the next section of the talk!</p>
+</div><div class="column" style="width:30%;">
+<p><span style="color:#EB526F;font-size:10rem"><i class="fa-solid fa-arrow-right"></i></span></p>
+</div></div>
 </section></section>
 <section>
-<section id="level-1-header" class="title-slide slide level1 center">
-<h1>Level 1 header</h1>
-<p>Content</p>
+<section id="section-break-slides" class="title-slide slide level1 graph-title-slide fa-down-arrow center">
+<h1>Section break slides</h1>
+<p>These indicate you should go downwards.</p>
+<div class="section-arrow">
+<p><i class="fa-solid fa-arrow-down"></i></p>
+</div>
 </section>
-<section id="another-new-slide" class="slide level2">
-<h2>Another new slide</h2>
-
+<section id="gpcds-slide-styles" class="slide level2 story-slide">
+<h2>GPCDS slide styles</h2>
+<p>Notice how everything looks a little different? Well, there are these special classes:</p>
+<ul>
+<li>.graph-slide</li>
+<li>.graph-title-slide</li>
+<li>.plot-slide</li>
+<li>.plot-title-slide</li>
+<li>.chart-slide</li>
+<li>.chart-title-slide</li>
+<li>.story-slide</li>
+<li>.story-title-slide</li>
+</ul>
 </section></section>
+<section id="default-section-break" class="title-slide slide level1 center">
+<h1>Default section break</h1>
+<p>Notice there is no arrow here.</p>
+<p>The arrow was added using</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a href=""></a>::: {.section-arrow}</span>
+<span id="cb1-2"><a href=""></a>&lt;i class="fa-solid fa-arrow-down"&gt;&lt;/i&gt;</span>
+<span id="cb1-3"><a href=""></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+
+<section id="another-nice-section-break" class="title-slide slide level1 story-title-slide center">
+<h1>Another nice section break</h1>
+
+</section>
+
+<section>
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+
+</section>
+<h3 id="miss-the-2">1-3, miss the 2</h3>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p>Using this pattern creates across slides that feel like normal progression.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource {verbatim} number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href=""></a>#</span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>### 1-3, miss the 2</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>However it is recommended to <strong>AVOID THIS</strong> as it has very non-standard behaviour. Check the source to see terrifying things done to the <code>&lt;section&gt;</code> tags.</p>
+</div><div class="column" style="width:30%;">
+<p><span style="color:#EB526F;font-size:10rem"><i class="fa-solid fa-bomb"></i></span></p>
+</div>
+</div>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="brand-identity/favicon_32x32.png" class="slide-logo"></p>
@@ -346,10 +325,10 @@ HELLO
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: false,
+        controlsTutorial: true,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'edges',
+        controlsLayout: 'bottom-right',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -400,7 +379,7 @@ HELLO
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'linear',
+        navigationMode: 'default',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -518,44 +497,6 @@ HELLO
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

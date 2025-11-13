@@ -11,7 +11,7 @@ $heading4Size: 35px;
 /* ---
 I would love to be able to use _brand.yml colours here but I get a theme compilation error
 So instead we have duplicated the colours
----*/ 
+---*/
 
 $brand-brand-blue: #3172AD;
 $brand-rag-green: #06402B;
@@ -48,6 +48,8 @@ $brand-ux-blue-mid: #4464AD;
 $brand-ux-blue-dark: #2A3E6E;
 $brand-ux-blue-light: #6B8EF3;
 $brand-black-mid: #4F4F4F;
+$brand-black-dark: #3B3B3B;
+$brand-neutral: #F9F7F1;
 
 
 // $body-color: #212529;
@@ -55,6 +57,24 @@ $brand-black-mid: #4F4F4F;
 
 
 // /*-- scss:rules --*/
+
+.gpcds-title-slide {
+
+  .slide-background-content{
+  background-color: $brand-story-primary
+  }
+
+  text-align: center;
+
+  * {
+    color: $brand-neutral;
+  }
+}
+
+.section-arrow{
+  position: fixed; bottom: 0px; right: 0px;
+  font-size: 100px;
+}
 
 .center-v {
     display:flex;
@@ -84,21 +104,21 @@ $brand-black-mid: #4F4F4F;
 .de-emphasis {
     opacity: 0.5;
   }
-  
+
 .center-x{
     text-align: center;
 }
-  
+
 .slide-number::before {
    content: "📽️ ";
 }
-  
+
 .task-slide-count {
   color:purple;
   margin-top:10px
 }
-  
-  
+
+
 .small{font-size: 80%}
 
 .subheading {
@@ -130,14 +150,14 @@ $brand-black-mid: #4F4F4F;
   background-size: contain;
   background-repeat: no-repeat;
   }
-  
-  
+
+
   .theme-title1 {
     &:is(.slide-background) {
       background-image: url('../../../../../assets/gpcds-wide-banner.png');
       @include background-full;
     }
-  
+
     h2 {
       text-align: center;
       font-size: 3em;
@@ -154,55 +174,144 @@ $brand-black-mid: #4F4F4F;
 .graph-slide {
     color: $brand-graph-tertiary-darker;
   h1, h2, h3 {
-    color: $brand-graph-primary !important;
+    color: $brand-graph-tertiary-darker !important;
   }
- 
+
   a {
     color: $brand-graph-tertiary-lighter !important;
   }
- 
+
+}
+
+.graph-title-slide {
+
+  .slide-background-content{
+  background-color: $brand-graph-tertiary-darker
+  }
+
+    color: $brand-neutral;
+  h1, h2, h3 {
+    color: $brand-neutral !important;
+    font-size: var(--r-heading1-size) !important;
+  }
+
+  a {
+    color: $brand-graph-primary !important;
+  }
+
+  code {
+    background-color: $brand-neutral !important;
+  }
+
 }
 
 .plot-slide {
     color: $brand-plot-tertiary-darker;
   h1, h2, h3 {
-    color: $brand-plot-primary !important;
+    color: $brand-plot-tertiary-darker !important;
   }
- 
+
   a {
     color: $brand-plot-tertiary-lighter !important;
   }
- 
+
+}
+
+.plot-title-slide {
+
+  .slide-background-content{
+  background-color: $brand-plot-tertiary-darker
+  }
+
+    color: $brand-neutral;
+  h1, h2, h3 {
+    color: $brand-neutral !important;
+    font-size: var(--r-heading1-size) !important;
+  }
+
+  a {
+    color: $brand-plot-primary !important;
+  }
+
+  code {
+    background-color: $brand-neutral !important;
+  }
+
 }
 
 .chart-slide {
     color: $brand-chart-tertiary-darker;
   h1, h2, h3 {
-    color: $brand-chart-primary !important;
+    color: $brand-chart-tertiary-darker !important;
   }
- 
+
   a {
     color: $brand-chart-tertiary-lighter !important;
   }
- 
+
 }
+
+.chart-title-slide {
+
+  .slide-background-content{
+  background-color: $brand-chart-tertiary-darker
+  }
+
+    color: $brand-neutral;
+  h1, h2, h3 {
+    color: $brand-neutral !important;
+    font-size: var(--r-heading1-size) !important;
+  }
+
+  a {
+    color: $brand-chart-tertiary-darker !important;
+  }
+
+  code {
+    background-color: $brand-neutral !important;
+  }
+
+}
+
 
 .story-slide {
     color: $brand-story-tertiary-darker;
   h1, h2, h3 {
     color: $brand-story-primary !important;
   }
- 
+
   a {
     color: $brand-story-tertiary-lighter !important;
   }
- 
+
+}
+
+.story-title-slide {
+
+  .slide-background-content{
+  background-color: $brand-story-tertiary-darker
+  }
+
+    color: $brand-neutral;
+  h1, h2, h3 {
+    color: $brand-neutral !important;
+    font-size: var(--r-heading1-size) !important;
+  }
+
+  a {
+    color: $brand-story-primary !important;
+  }
+
+  code {
+    background-color: $brand-neutral !important;
+  }
+
 }
 
 .other-slide {
   color: $brand-other-tertiary-darker;
 h1, h2, h3 {
-  color: $brand-other-secondary !important;
+  color: $brand-other-tertiary-darker !important;
 }
 
 a {

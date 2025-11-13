@@ -1,13 +1,13 @@
-meta: 
+meta:
   name: Graph | Plot | Chart | Data Story
 
-logo: 
+logo:
   images:
     icon: brand-identity/favicon_32x32.png
     full-white-on-black: brand-identity/logomark_white_on_black.png
     full: brand-identity/logomark_colour.png
   small: icon
-  medium: 
+  medium:
     dark: full-white-on-black
     light: full
   large:
@@ -16,7 +16,7 @@ logo:
 
 color:
   palette:
-    neutral: "#F9F7F1" 
+    neutral: "#F9F7F1"
     brand-blue: "#3172AD"
     rag-green: "#06402B"
     rag-red: "#B33134"
@@ -69,7 +69,7 @@ typography:
   link:
     color: maroon
     decoration: underline
-    
+
 defaults:
   bootstrap:
     defaults:
