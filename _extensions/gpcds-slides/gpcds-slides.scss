@@ -1,6 +1,12 @@
 /*-- scss:defaults --*/
 
 $body-bg: #F9F7F2;
+$link-color: #e10020;
+$currentColor: orange;
+$presentation-font-size-root: 26px;
+$heading2Size: 52px;
+$heading3Size: 45px;
+$heading4Size: 35px;
 
 /* ---
 I would love to be able to use _brand.yml colours here but I get a theme compilation error
@@ -43,8 +49,8 @@ $brand-ux-blue-dark: #2A3E6E;
 $brand-ux-blue-light: #6B8EF3;
 $brand-black-mid: #4F4F4F;
 
+
 // $body-color: #212529;
-// $presentation-heading-font: Futura;
 // $font-family-sans-serif: Karla;
 
 
@@ -58,10 +64,90 @@ $brand-black-mid: #4F4F4F;
 
 
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2);
-  color: #7e588aff;
-  height: 1%;
+    color: $brand-story-primary !important;
+    height: 0.5%;
 }
+
+.reveal .footer {
+    color: #ffffff;
+    background-color: $brand-black-mid;
+    display: block;
+    position: fixed;
+    font-family: Futura;
+    padding-bottom: clamp(10px, 2vh, 600px);
+    padding-top: clamp(10px, 1vh, 600px);
+    bottom: 0px !important; // Makes footer div flush with bottom of slide
+    width: 100%;
+    z-index: 2 !important; // Sets the footer div further down the z-index
+  }
+
+.de-emphasis {
+    opacity: 0.5;
+  }
+  
+.center-x{
+    text-align: center;
+}
+  
+.slide-number::before {
+   content: "📽️ ";
+}
+  
+.task-slide-count {
+  color:purple;
+  margin-top:10px
+}
+  
+  
+.small{font-size: 80%}
+
+.subheading {
+  color: #535353;
+  font-size: 45px;;
+}
+
+.footnote{
+  font-size: 60%;
+  width: 100%;
+}
+
+.big-note{
+  font-family: 'Open Sans', sans-serif;
+    color: #535353;
+    line-height: -10px;
+    font-size: 32px
+}
+
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+@mixin background-full {
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+  
+  
+  .theme-title1 {
+    &:is(.slide-background) {
+      background-image: url('../../../../../assets/gpcds-wide-banner.png');
+      @include background-full;
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: 3em;
+    }
+    h3 {
+      color: $brand-brand-blue;
+      text-align: center;
+      font-size: 2em;
+    }
+  }
 
 /* Dataviz specific classes */
 
@@ -72,7 +158,7 @@ $brand-black-mid: #4F4F4F;
   }
  
   a {
-    color: $brand-graph-secondary !important;
+    color: $brand-graph-tertiary-lighter !important;
   }
  
 }
@@ -84,7 +170,7 @@ $brand-black-mid: #4F4F4F;
   }
  
   a {
-    color: $brand-plot-secondary !important;
+    color: $brand-plot-tertiary-lighter !important;
   }
  
 }
@@ -96,7 +182,7 @@ $brand-black-mid: #4F4F4F;
   }
  
   a {
-    color: $brand-chart-secondary !important;
+    color: $brand-chart-tertiary-lighter !important;
   }
  
 }
@@ -108,7 +194,19 @@ $brand-black-mid: #4F4F4F;
   }
  
   a {
-    color: $brand-story-secondary !important;
+    color: $brand-story-tertiary-lighter !important;
   }
  
+}
+
+.other-slide {
+  color: $brand-other-tertiary-darker;
+h1, h2, h3 {
+  color: $brand-other-secondary !important;
+}
+
+a {
+  color: $brand-other-tertiary-lighter !important;
+}
+
 }

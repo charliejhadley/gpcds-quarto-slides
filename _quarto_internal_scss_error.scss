@@ -1,4 +1,4 @@
-// quarto-scss-analysis-annotation { "quarto-version": "1.7.29" }
+// quarto-scss-analysis-annotation { "quarto-version": "1.8.24" }
 
 // quarto-scss-analysis-annotation { "origin": "'use' section from format" }
 
@@ -78,61 +78,283 @@
 
 
 $body-bg: #F9F7F2;
+$link-color: #e10020;
+$currentColor: orange;
+$presentation-font-size-root: 26px;
+$heading2Size: 52px;
+$heading3Size: 45px;
+$heading4Size: 35px;
+
+/* ---
+I would love to be able to use _brand.yml colours here but I get a theme compilation error
+So instead we have duplicated the colours
+---*/ 
+
+$brand-brand-blue: #3172AD;
+$brand-rag-green: #06402B;
+$brand-rag-red: #B33134;
+$brand-graph-primary: #30CED1;
+$brand-graph-tertiary-darker: #105052;
+$brand-graph-tertiary-lighter: #1E8F91;
+$brand-graph-tertiary: #1B8385;
+$brand-graph-secondary: #D13BA4;
+$brand-plot-primary: #E0BE36;
+$brand-plot-tertiary-darker: #615216;
+$brand-plot-tertiary-lighter: #A18826;
+$brand-plot-tertiary: #947A14;
+$brand-plot-secondary: #4CE0D0;
+$brand-chart-primary: #FA8A5B;
+$brand-chart-tertiary-darker: #80452E;
+$brand-chart-tertiary-lighter: #C06845;
+$brand-chart-tertiary: #B3542F;
+$brand-chart-secondary: #A7FF75;
+$brand-story-primary: #EB526F;
+$brand-story-tertiary-darker: #6B2332;
+$brand-story-tertiary-lighter: #AA3D4F;
+$brand-story-tertiary: #9E283D;
+$brand-story-secondary: #EBE46A;
+$brand-other-primary: #D8F794;
+$brand-other-tertiary-darker: #697847;
+$brand-other-tertiary-lighter: #A1B86D;
+$brand-other-tertiary: #90AB55;
+$brand-other-secondary: #AEC6F8;
+$brand-grey-dark: #656370;
+$brand-grey-mid: #BBBBBD;
+$brand-grey-light: #DCDCDE;
+$brand-ux-blue-mid: #4464AD;
+$brand-ux-blue-dark: #2A3E6E;
+$brand-ux-blue-light: #6B8EF3;
+$brand-black-mid: #4F4F4F;
+
 
 // $body-color: #212529;
-// $presentation-heading-font: Futura;
 // $font-family-sans-serif: Karla;
 
 
 // /*-- scss:rules --*/
 
 .center-v {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+
+.reveal .progress {
+    color: $brand-story-primary !important;
+    height: 0.5%;
 }
 
-.variant-one {
-    color: #d6d6d6;
+.reveal .footer {
+    color: #ffffff;
+    background-color: $brand-black-mid;
+    display: block;
+    position: fixed;
+    font-family: Futura;
+    padding-bottom: clamp(10px, 2vh, 600px);
+    padding-top: clamp(10px, 1vh, 600px);
+    bottom: 0px !important; // Makes footer div flush with bottom of slide
+    width: 100%;
+    z-index: 2 !important; // Sets the footer div further down the z-index
+  }
 
-    h1,
-    h2,
-    h3 {
-        color: #f3f3f3;
-    }
+.de-emphasis {
+    opacity: 0.5;
+  }
+  
+.center-x{
+    text-align: center;
+}
+  
+.slide-number::before {
+   content: "📽️ ";
+}
+  
+.task-slide-count {
+  color:purple;
+  margin-top:10px
+}
+  
+  
+.small{font-size: 80%}
 
-    a {
-        color: #00e0e0;
-    }
-
-    p code {
-        color: #ffd700;
-    }
+.subheading {
+  color: #535353;
+  font-size: 45px;;
 }
 
-.variant-two {
-    color: #a6a6d6;
+.footnote{
+  font-size: 60%;
+  width: 100%;
+}
 
-    h1,
-    h2,
+.big-note{
+  font-family: 'Open Sans', sans-serif;
+    color: #535353;
+    line-height: -10px;
+    font-size: 32px
+}
+
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+@mixin background-full {
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  }
+  
+  
+  .theme-title1 {
+    &:is(.slide-background) {
+      background-image: url('../../../../../assets/gpcds-wide-banner.png');
+      @include background-full;
+    }
+  
+    h2 {
+      text-align: center;
+      font-size: 3em;
+    }
     h3 {
-        color: #222222;
+      color: $brand-brand-blue;
+      text-align: center;
+      font-size: 2em;
     }
+  }
 
-    a {
-        color: #f22341;
-    }
+/* Dataviz specific classes */
 
-    p code {
-        color: #ff00ff;
-    }
+.graph-slide {
+    color: $brand-graph-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-graph-primary !important;
+  }
+ 
+  a {
+    color: $brand-graph-tertiary-lighter !important;
+  }
+ 
+}
 
+.plot-slide {
+    color: $brand-plot-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-plot-primary !important;
+  }
+ 
+  a {
+    color: $brand-plot-tertiary-lighter !important;
+  }
+ 
+}
 
-    .reveal .progress {
-        background: rgba(0, 0, 0, 0.2);
-        color: #7e588aff;
-        height: 1%;
-    }
+.chart-slide {
+    color: $brand-chart-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-chart-primary !important;
+  }
+ 
+  a {
+    color: $brand-chart-tertiary-lighter !important;
+  }
+ 
+}
+
+.story-slide {
+    color: $brand-story-tertiary-darker;
+  h1, h2, h3 {
+    color: $brand-story-primary !important;
+  }
+ 
+  a {
+    color: $brand-story-tertiary-lighter !important;
+  }
+ 
+}
+
+.other-slide {
+  color: $brand-other-tertiary-darker;
+h1, h2, h3 {
+  color: $brand-other-secondary !important;
+}
+
+a {
+  color: $brand-other-tertiary-lighter !important;
+}
+
+}
+/* typography variables from _brand.yml */
+// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml typography" }
+$link-color: maroon !default;
+$link-decoration: underline !default;
+$headings-font-family: Futura !default;
+$headings-font-weight: 400 !default;
+$h1h2h3-font-weight: 400 !default;
+$headings-color: #3172AD !default;
+$presentation-heading-font: Futura !default;
+$presentation-heading-font-weight: 400 !default;
+$presentation-heading-color: #3172AD !default;
+$font-family-base: Karla !default;
+$mainFont: Karla !default;
+$mermaid-font-family: Karla !default;
+// quarto-scss-analysis-annotation { "action": "pop" }
+/* color variables from _brand.yml */
+// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml color" }
+$brand-neutral: #F9F7F1 !default;
+$brand-brand-blue: #3172AD !default;
+$brand-rag-green: #06402B !default;
+$brand-rag-red: #B33134 !default;
+$brand-graph-primary: #30CED1 !default;
+$brand-graph-tertiary-darker: #105052 !default;
+$brand-graph-tertiary-lighter: #1E8F91 !default;
+$brand-graph-tertiary: #1B8385 !default;
+$brand-graph-secondary: #D13BA4 !default;
+$brand-plot-primary: #E0BE36 !default;
+$brand-plot-tertiary-darker: #615216 !default;
+$brand-plot-tertiary-lighter: #A18826 !default;
+$brand-plot-tertiary: #947A14 !default;
+$brand-plot-secondary: #4CE0D0 !default;
+$brand-chart-primary: #FA8A5B !default;
+$brand-chart-tertiary-darker: #80452E !default;
+$brand-chart-tertiary-lighter: #C06845 !default;
+$brand-chart-tertiary: #B3542F !default;
+$brand-chart-secondary: #A7FF75 !default;
+$brand-story-primary: #EB526F !default;
+$brand-story-tertiary-darker: #6B2332 !default;
+$brand-story-tertiary-lighter: #AA3D4F !default;
+$brand-story-tertiary: #9E283D !default;
+$brand-story-secondary: #EBE46A !default;
+$brand-other-primary: #D8F794 !default;
+$brand-other-tertiary-darker: #697847 !default;
+$brand-other-tertiary-lighter: #A1B86D !default;
+$brand-other-tertiary: #90AB55 !default;
+$brand-other-secondary: #AEC6F8 !default;
+$brand-grey-dark: #656370 !default;
+$brand-grey-mid: #BBBBBD !default;
+$brand-grey-light: #DCDCDE !default;
+$brand-ux-blue-mid: #4464AD !default;
+$brand-ux-blue-dark: #2A3E6E !default;
+$brand-ux-blue-light: #6B8EF3 !default;
+$brand-black-mid: #4F4F4F !default;
+$foreground: black !default;
+$background: #F9F7F1 !default;
+$primary: #3172AD !default;
+$secondary: saddlebrown !default;
+$success: #06402B !default;
+$info: red !default;
+$danger: #B33134 !default;
+$pre-color: black !default;
+$body-bg: #F9F7F1 !default;
+$body-color: black !default;
+$body-secondary-color: saddlebrown !default;
+$body-secondary: saddlebrown !default;
+$body-tertiary: saddlebrown !default;
+// quarto-scss-analysis-annotation { "action": "pop" }
+$theme: "brand" !default;
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from Quarto's SCSS" }
 
@@ -334,7 +556,7 @@ $overlayElementFgColor: 0, 0, 0 !default;
 
 // -- END setting.scss --
 
-$code-copy-selector: "pre.sourceCode:hover > " !default;
+$code-copy-selector: "div.code-copy-outer-scaffold:hover > " !default;
 $code-white-space: pre !default;
 $tbl-cap-location: top !default;
 // main colors
@@ -1078,8 +1300,7 @@ details > summary > p:only-child {
 }
 
 // codeCopy
-pre.sourceCode,
-code.sourceCode {
+div.code-copy-outer-scaffold {
   position: relative;
 }
 
@@ -2615,5 +2836,46 @@ $presentation-author-block-padding-right: if(
   }
 }
 
+/* color CSS variables from _brand.yml */
+// quarto-scss-analysis-annotation { "action": "push", "origin": "_brand.yml color" }
+:root {
+  --brand-neutral: #F9F7F1;
+  --brand-brand-blue: #3172AD;
+  --brand-rag-green: #06402B;
+  --brand-rag-red: #B33134;
+  --brand-graph-primary: #30CED1;
+  --brand-graph-tertiary-darker: #105052;
+  --brand-graph-tertiary-lighter: #1E8F91;
+  --brand-graph-tertiary: #1B8385;
+  --brand-graph-secondary: #D13BA4;
+  --brand-plot-primary: #E0BE36;
+  --brand-plot-tertiary-darker: #615216;
+  --brand-plot-tertiary-lighter: #A18826;
+  --brand-plot-tertiary: #947A14;
+  --brand-plot-secondary: #4CE0D0;
+  --brand-chart-primary: #FA8A5B;
+  --brand-chart-tertiary-darker: #80452E;
+  --brand-chart-tertiary-lighter: #C06845;
+  --brand-chart-tertiary: #B3542F;
+  --brand-chart-secondary: #A7FF75;
+  --brand-story-primary: #EB526F;
+  --brand-story-tertiary-darker: #6B2332;
+  --brand-story-tertiary-lighter: #AA3D4F;
+  --brand-story-tertiary: #9E283D;
+  --brand-story-secondary: #EBE46A;
+  --brand-other-primary: #D8F794;
+  --brand-other-tertiary-darker: #697847;
+  --brand-other-tertiary-lighter: #A1B86D;
+  --brand-other-tertiary: #90AB55;
+  --brand-other-secondary: #AEC6F8;
+  --brand-grey-dark: #656370;
+  --brand-grey-mid: #BBBBBD;
+  --brand-grey-light: #DCDCDE;
+  --brand-ux-blue-mid: #4464AD;
+  --brand-ux-blue-dark: #2A3E6E;
+  --brand-ux-blue-light: #6B8EF3;
+  --brand-black-mid: #4F4F4F;
+}
+// quarto-scss-analysis-annotation { "action": "pop" }
 
 // quarto-scss-analysis-annotation { "origin": null }

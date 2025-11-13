@@ -1,7 +1,71 @@
 ---
-title: "Graph | Plot | Chart | Data Story<br>Deck Template"
-format: gpcds-slides-revealjs
+title: "GRAPH | PLOT | CHART | DATA STORY<br>revealjs TemplateTests"
+format: 
+    gpcds-slides-revealjs:
+        slide-number: "c/t"
+        brand: brand.yml
 ---
+
+# {background-color="#efee"}
+
+<span style='{{<brand color chart-primary>}}'>foo</span>
+
+# {background-image="example-slide.png" background-size="100%"}
+
+## Slide
+
+```{=html}
+<h2>HELLO</h2>
+```
+
+```{=html}
+<style>
+.section-1 {
+    /* Top edge at 0%, left at 0%
+       Right edge at 100%, top at 0%
+       Bottom right corner at 100%, say 80% down
+       Bottom left corner at 0%, say 100% down */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    background-color:red;
+    /* You'd need to adjust these percentages to create a 40-degree slope */
+}
+
+/* For the next section, the top edge would align with the previous section's bottom edge */
+.section-2 {
+    clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+    /* This is just illustrative; precise calculation is needed */
+}
+</style>
+
+<div class="section-1">
+HELLO
+</div>
+
+```
+
+
+# Section Slide
+
+When creating a slide with level 1 heading it will look like this.
+
+Learn more from https://emilhvitfeldt.com/project/slidecraft-101/#blog-posts
+
+TEST
+
+## Standard slide
+
+This is how most slides will look.
+
+```{r}
+#| echo: true
+library("tidyverse")
+gss_cat %>%
+    count(partyid) %>%
+    ggplot() +
+    aes(x = n,
+        y = partyid) +
+    geom_col()
+```
 
 ## Graph Specific Slide {.graph-slide}
 
@@ -12,7 +76,48 @@ The classes customise the following:
 - Headers are the primary colour
 - Body text is the tertiary darker colour
 
-At present [Updated May 2025] Quarto doesn't have a solution for pointing to a remote _brand.yml file. But if it did might want to use some of the colours here.
+At present [Updated May 2025] Quarto doesn't have a solution for [pointing to a remote _brand.yml file](https://github.com/quarto-dev/quarto-cli/discussions/12688). But if it did might want to use some of the colours here.
+
+## Plot Specific Slide {.plot-slide}
+
+This slide uses the `{.plot-slide}` style.
+
+Links are a [different colour](https://google.com)
+
+::: columns
+::: {.column width="50%"}
+Columns
+
+Columns
+:::
+
+::: {.column width="50%"}
+Columns
+
+Columns
+:::
+:::
+
+
+## Chart Specific Slide {.chart-slide}
+
+This slide uses the `{.chart-slide}` style.
+
+Links are a [different colour](https://google.com)
+
+
+## Story Specific Slide {.story-slide}
+
+This slide uses the `{.story-slide}` style.
+
+Links are a [different colour](https://google.com)
+
+## Story Specific Slide {.other-slide}
+
+This slide uses the `{.other-slide}` style.
+
+Links are a [different colour](https://google.com)
+
 
 # Level 1 header
 

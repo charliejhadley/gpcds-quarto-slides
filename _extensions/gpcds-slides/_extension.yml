@@ -1,7 +1,9 @@
 title: GPCDS Quarto Deck
-author: Charlotte Hadley
+author: Charlotte Jane Hadley
 version: 0.0.1
 contributes:
   formats:
     revealjs:
-       theme: [default, gpcds-slides.scss]
+      theme: [default, gpcds-slides.scss]
+      slide-number: "c/t"
+      footer: "<span style='color:{{<brand color story-tertiary-darker>}}'><span style='color:{{<brand color graph-primary>}}'>GRAPH</span> | <span style='color:{{<brand color plot-primary>}}'>PLOT</span> | <span style='color:{{<brand color chart-primary>}}'>CHART</span> | <span style='color:{{<brand color story-primary>}}'>DATA STORY</span></span>"
