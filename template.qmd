@@ -90,6 +90,14 @@ Head **across** to the next section of the talk!
 
 ::::
 
+## References
+
+::: {.card-attribution}
+DOI: [10.1080/17457289.2018.1465061](https://10.1080/17457289.2018.1465061)
+
+Year: 2019
+:::
+
 
 # Section break slides {.graph-title-slide .fa-down-arrow}
 
