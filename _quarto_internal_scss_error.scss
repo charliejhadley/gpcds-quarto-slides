@@ -135,6 +135,31 @@ $brand-neutral: #F9F7F1;
 
 // /*-- scss:rules --*/
 
+.quote-graph {
+    color: $brand-graph-tertiary-darker !important;
+    border-left: .25rem solid $brand-graph-primary !important;
+}
+
+.quote-plot {
+    color: $brand-plot-tertiary-darker !important;
+    border-left: .25rem solid $brand-plot-primary !important;
+}
+
+.quote-chart {
+    color: $brand-chart-tertiary-darker !important;
+    border-left: .25rem solid $brand-chart-primary !important;
+}
+
+.quote-story {
+    color: $brand-story-tertiary-darker !important;
+    border-left: .25rem solid $brand-story-primary !important;
+}
+
+.quote-story-alt {
+    color: $brand-story-primary !important;
+    border-left: .25rem solid $brand-story-tertiary-darker !important;
+}
+
 .gpcds-title-slide {
 
   .slide-background-content{
@@ -432,7 +457,7 @@ a {
   border: 1px solid #999999;
   width: fit-content;
   padding: 0.5rem;
-  position: fixed; bottom: 0%; left: 0%;
+  position: static; bottom: 0%; left: 0%;
   font-size: 1rem;
   line-height: 1rem;
   margin-top: 0px;

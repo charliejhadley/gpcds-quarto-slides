@@ -84,7 +84,7 @@ Head **across** to the next section of the talk!
 
 ::: {.column width="30%"}
 
-<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-arrow-right"></i></span>
+<span style='color:{{<brand color story-primary>}};font-size:10rem'><i class="fa-solid fa-arrow-down"></i></span>
 
 :::
 
@@ -97,6 +97,30 @@ DOI: [10.1080/17457289.2018.1465061](https://10.1080/17457289.2018.1465061)
 
 Year: 2019
 :::
+
+## Quotes!
+
+<blockquote class="quote-graph">
+We use blockquote to support accessibility tools
+</blockquote>
+
+
+<blockquote class="quote-plot">
+If we styled a div it would lose meaning
+</blockquote>
+
+
+<blockquote class="quote-chart">
+Note that we use dark colours
+</blockquote>
+
+<blockquote class="quote-story">
+For contrast accessibility
+</blockquote>
+
+<blockquote class="quote-story-alt">
+But provide a 'quote-story-alt' for emphasis.
+</blockquote>
 
 
 # Section break slides {.graph-title-slide .fa-down-arrow}
